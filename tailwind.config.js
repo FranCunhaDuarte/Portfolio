@@ -8,6 +8,7 @@ module.exports = {
     },
     colors: {
       black: '#141414',
+      lightblack: '#1C1C1C',
       white: '#FFFFFF',
       gray: '#898989',
       green: '#4F7451'
@@ -16,10 +17,10 @@ module.exports = {
       sm: '480px',
       md: '768px',
       lg: '976px',
-      xl: '1440px',
+      xl: '1170px',
     },
     fontFamily:{
-      sfPro: ['SFPro', 'sans-serif']
+      sfPro: ['SFPro', 'sans-serif'],
     },
     extend: {},
   },
