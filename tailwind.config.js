@@ -20,8 +20,7 @@ module.exports = {
       sm: '480px',
       md: '768px',
       lg: '976px',
-      xl: '1100px',
-      xxl: '1440px'
+      xl: '1100px'
     },
     fontFamily:{
       sfPro: ['SFPro', 'sans-serif'],

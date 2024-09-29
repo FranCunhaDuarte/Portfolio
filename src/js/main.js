@@ -23,6 +23,18 @@ const copy = () =>{
     copyAlert.classList.remove('hidden');
     setTimeout(() => {
         copyAlert.classList.add('hidden');
-    }, 3000);
-    
+    }, 3000);    
 }
+
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    const scrollPosition = window.scrollY;
+
+    if(scrollPosition >= 40){
+        header.classList.remove('after:opacity-0');
+    }else{
+        header.classList.add('after:opacity-0');
+    }
+
+})
+
