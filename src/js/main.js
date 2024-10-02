@@ -12,7 +12,6 @@ document.querySelectorAll('.box').forEach(box=>{
         button.classList.remove('active');
         box.classList.toggle('xl:top-0');
     })
-
 });
 
 
