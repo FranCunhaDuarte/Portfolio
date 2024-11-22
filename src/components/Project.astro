@@ -1,0 +1,53 @@
+---
+import Arrow from '@/icon/Arrow.astro';
+import Html from '@/icon/Html.astro';
+import Css from '@/icon/Css.astro';
+import Javascript from '@/icons/Javascript.astro';
+import Php from '@/icons/Php.astro';
+import Figma from '@/icons/Figma.astro';
+
+interface Props {
+	title: string;
+    website: string;
+    repository: string;
+}
+
+const { title, website, repository } = Astro.props;
+---
+
+<article class="w-full relative after:absolute after:bg-blue after:max-w-96 after:w-full after:aspect-square after:top-[50%] after:translate-y-[-50%] after:blur-[300px] after:right-full after:translate-x-[50%] after:rounded-full before:absolute before:bg-blue before:max-w-96 before:w-full before:aspect-square before:top-[50%] before:translate-y-[-50%] before:blur-[300px] before:left-full before:translate-x-[-50%] before:rounded-full ">
+    <div class="flex flex-col items-center gap-32 container mx-auto px-2 relative group">
+      <div class="overflow-hidden w-[90vw] aspect-square max-w-[1200px] max-h-[750px] bg-projects  rounded-[1.5rem] relative z-[120]">
+        <div class="rounded-[1.4rem] bg-black-300 absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] p-[5px] w-[calc(100%_-_3px)] h-[calc(100%_-_3px)]">
+          <div class="w-full h-full bg-black-100 rounded-[1.1rem] border-[1px] border-[#dddddd] overflow-hidden relative z-[130] transition-[border] duration-200  after:absolute after:bg-gradient-to-b after:from-blue after:to-black-100 after:w-full after:h-full after:opacity-100 after:top-0 after:left-0 xl:after:group-hover:opacity-100 xl:after:transition-[opacity] xl:after:duration-700 xl:after:opacity-0 before:absolute before:w-full before:h-full before:bg-bg-default-projects before:top-0 before:left-0 before:opacity-0 xl:before:opacity-100 xl:group-hover:border-white xl:before:group-hover:opacity-0 xl:before:transition-[opacity] xl:before:duration-200">
+            <div class="relative pt-5 px-7 flex flex-col justify-between h-full z-[150]">
+              <div class="flex flex-col gap-2">
+                <h2 class="text-white font-normal text-5xl text-[clamp(30px,8vw,50px)] [text-shadow:_0px_0px_4px_rgba(255,255,255,0.3)]">{title}</h2>
+                <ul class="flex gap-4 ml-4 text-white xl:flex-col xl:gap-1">
+                  <li class="relative group/link max-w-fit"><div class="transition-transform duration-300 xl:group-hover/link:translate-x-4"><a href="00000000000000{website}"><span class="underline underline-offset-2 xl:no-underline">Website</span><Arrow></Arrow></a></div></li>
+                  <li class="relative group/link max-w-fit"><div class="transition-transform duration-300 xl:group-hover/link:translate-x-4"><a href="{repository}"><span class="underline underline-offset-2 xl:no-underline">Repository</span><Arrow></Arrow></a></div></li>
+                </ul>
+              </div>
+              <div class="relative flex h-[60%] items-end justify-center mx-auto">
+                <img class="max-w-full max-h-[110%] shadow-2xl shadow-black-100 object-cover xl:hover:scale-[1.05] xl:translate-y-24 xl:group-hover:translate-y-0 xl:transition-[transform] xl:duration-700" src="./sources/websites-illustrations/PortoNovo(1).png" alt="">
+                <img class="absolute max-w-[30%] bottom-0 right-0 max-h-[120%] shadow-2xl shadow-black-100 xl:hover:scale-[1.05] xl:translate-y-24 xl:group-hover:translate-y-0 xl:transition-[transform] xl:duration-700" src="./sources/websites-illustrations/PortoNovo(2).png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box absolute bottom-full right-[50%] translate-x-[50%] transition-[top,_bottom] duration-300 z-[110] md:translate-x-0 md:right-8 xl:top-0">
+        <div class="button absolute right-[50%] translate-x-[50%] bottom-full w-[60px] h-[30px] transition-[transform] duration-200 cursor-pointer">
+          <div class="absolute w-[60px] h-[15px] border-gray border-[1px] border-b-0 left-0 rounded-t-xl bg-black-300 bottom-0 z-[120]"></div>
+          <div class="absolute rounded-full bottom-[5px] left-[50%] translate-x-[-50%] w-4 h-4 bg-white animate-pulse-custom [box-shadow:_0px_0px_33px_0px_rgba(255,255,255,0.75)] z-[115]"></div>
+        </div>
+        <div class="relative top-0 left-0 border-[1px] border-b-0 border-gray px-4 py-1 bg-black-300 rounded-t-2xl flex justify-center items-center gap-2 w-fit transition-[bottom,_top] duration-300">
+          <div class="html w-8 h-8 p-[0.35rem]"><Html></Html></div>
+          <div class="css w-8 h-8 p-[0.35rem]"><Css></Css></div>
+          <div class="js w-8 h-8 p-[0.3rem]"><Javascript></Javascript></div>
+          <div class="php w-8 h-8 p-[0rem]"><Php></Php></div>
+          <div class="figma w-8 h-8 p-[0.15rem]"><Figma></Figma></div>
+        </div>
+      </div>
+    </div>
+</article>

@@ -1,0 +1,70 @@
+---
+import Header from '@/layo/Header.astro';
+import Footer from '@/layo/Footer.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="stylesheet" href="../input.css">
+	</head>
+	<body>
+        <Header></Header>
+		<slot />
+        <Footer></Footer>
+	</body>
+</html>
+<style is:global>
+	@font-face {
+        font-family: "SFPro";
+        font-weight: 300;
+        font-style: normal;
+        src: url('../../public/fonts/SF-Pro-Text-Light.otf') format('opentype');
+    }
+    @font-face {
+        font-family: "SFPro";
+        font-weight: 400;
+        font-style: normal;
+        src: url('../../public/fonts/SF-Pro-Text-Regular.otf') format('opentype');
+    }
+    @font-face {
+        font-family: "SFPro";
+        font-weight: 500;
+        font-style: normal;
+        src: url('../../public/fonts/SF-Pro-Text-Medium.otf') format('opentype');
+    }
+    @font-face {
+        font-family: "SFPro";
+        font-weight: 700;
+        font-style: normal;
+        src: url('../../public/fonts/SF-Pro-Text-Bold.otf') format('opentype');
+    }
+
+	.active{
+        @apply translate-y-[.3rem];
+    }
+
+    .animate-pulse-custom{
+        animation: pulse .8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: .5;
+        }
+      }
+</style>
