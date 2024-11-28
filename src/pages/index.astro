@@ -2,7 +2,8 @@
 import Layout from '@/layo/Layout.astro';
 import Hero from '@/sect/Hero.astro';
 import AboutMe from '@/sect/AboutMe.astro';
-import Project from '@/comp/Project.astro';
+import ProjectStructure from '@/comp/Project.astro';
+import { project } from '@/lib/data';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -10,7 +11,7 @@ import Project from '@/comp/Project.astro';
 		<Hero></Hero>
 		<section class="flex flex-col place-items-center gap-32 pb-32 ">
 			<AboutMe></AboutMe>
-			<Project></Project>
+			{project.map((project) => <ProjectStructure project={project}/>) }
 		</section>
 	</main>
 </Layout>

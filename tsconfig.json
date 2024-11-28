@@ -8,6 +8,7 @@
       "@/layo/*": ["./src/layouts/*"],
       "@/sect/*": ["./src/sections/*"],
       "@/icon/*": ["./src/icons/*"],
+      "@/lib/*": ["./src/lib/*"],
     }
   }
 }

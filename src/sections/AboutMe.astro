@@ -1,3 +1,9 @@
+---
+import TechsContainer from '@/comp/TechsContainer.astro'
+
+const {TechData} = Astro.props;
+---
+
 <section class="mt-20 flex items-center justify-center gap-10 w-full py-14 bg-black-300 bg-opacity-10 border-y-[1px] border-darkgray backdrop-blur-[1.5px]">
     <div class="container px-4 flex flex-col xl:flex-row items-center gap-20 justify-between">
       <article class="max-w-[28rem]">
@@ -8,11 +14,7 @@
         </div>
       </article>
       <article>
-          <ul class="grid grid-cols-2 items-center grid-rows-[50px,50px,50px] gap-x-8 gap-y-5 w-full max-w-[500px] h-fit my-auto grid-flow-dense">
-            <li class="grid grid-cols-[1fr,2fr] w-full min-w-fit justify-around bg-black-200 border-[1px] border-darkgray px-7 py-2 rounded-xl text-white text-xl cursor-default"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="24" fill="none" viewBox="0 0 41 24"><path fill="#44A8B3" d="M10.25 8c1.367-5.333 4.783-8 10.25-8 8.2 0 9.225 6 13.325 7 2.733.667 5.125-.333 7.175-3-1.367 5.333-4.783 8-10.25 8-8.2 0-9.225-6-13.325-7-2.733-.667-5.125.333-7.175 3ZM0 20c1.367-5.333 4.783-8 10.25-8 8.2 0 9.225 6 13.325 7 2.733.667 5.125-.333 7.175-3-1.367 5.333-4.783 8-10.25 8-8.2 0-9.225-6-13.325-7-2.733-.667-5.125.333-7.175 3Z"/></svg><span class="text-center">Tailwind</span></li>
-            <li class="grid grid-cols-[1fr,2fr] w-full min-w-fit justify-around bg-black-200 border-[1px] border-darkgray px-7 py-2 rounded-xl text-white text-xl cursor-default"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="24" fill="none" viewBox="0 0 41 24"><path fill="#44A8B3" d="M10.25 8c1.367-5.333 4.783-8 10.25-8 8.2 0 9.225 6 13.325 7 2.733.667 5.125-.333 7.175-3-1.367 5.333-4.783 8-10.25 8-8.2 0-9.225-6-13.325-7-2.733-.667-5.125.333-7.175 3ZM0 20c1.367-5.333 4.783-8 10.25-8 8.2 0 9.225 6 13.325 7 2.733.667 5.125-.333 7.175-3-1.367 5.333-4.783 8-10.25 8-8.2 0-9.225-6-13.325-7-2.733-.667-5.125.333-7.175 3Z"/></svg><span class="text-center">Astro</span></li>
-            <li class="grid grid-cols-[1fr,2fr] w-full min-w-fit justify-around bg-black-200 border-[1px] border-darkgray px-7 py-2 rounded-xl text-white text-xl cursor-default"><svg xmlns="http://www.w3.org/2000/svg" width="41" height="24" fill="none" viewBox="0 0 41 24"><path fill="#44A8B3" d="M10.25 8c1.367-5.333 4.783-8 10.25-8 8.2 0 9.225 6 13.325 7 2.733.667 5.125-.333 7.175-3-1.367 5.333-4.783 8-10.25 8-8.2 0-9.225-6-13.325-7-2.733-.667-5.125.333-7.175 3ZM0 20c1.367-5.333 4.783-8 10.25-8 8.2 0 9.225 6 13.325 7 2.733.667 5.125-.333 7.175-3-1.367 5.333-4.783 8-10.25 8-8.2 0-9.225-6-13.325-7-2.733-.667-5.125.333-7.175 3Z"/></svg><span class="text-center">Javascript</span></li>
-          </ul>
+          <TechsContainer/>
       </article>
     </div>
   </section>

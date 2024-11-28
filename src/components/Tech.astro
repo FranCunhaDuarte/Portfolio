@@ -1,0 +1,17 @@
+---
+import type { JSX } from 'astro/jsx-runtime';
+
+
+interface Props{
+    icono: any;
+    title: string;
+}
+
+const {icono: Icono, title} = Astro.props
+
+---
+
+<li class="grid grid-cols-[1fr,2fr] w-full min-w-fit justify-around bg-black-200 border-[1px] border-darkgray px-7 pl-5 py-[6px] rounded-xl text-white text-xl cursor-default">
+    <Icono/>
+    <span>{title}</span>
+</li>

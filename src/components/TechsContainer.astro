@@ -1,0 +1,23 @@
+---
+import Tech from '@/comp/Tech.astro';
+import Html from '@/comp/HtmlColor.astro';
+import Css from '@/comp/CssColor.astro';
+import Javascript from '@/comp/JavascriptColor.astro';
+import Figma from '@/comp/FigmaColor.astro';
+import Git from '@/comp/GitColor.astro';
+import Tailwind from '@/comp/TailwindColor.astro';
+import AstroIcon from '@/comp/AstroColor.astro';
+
+---
+
+<ul class="grid grid-cols-2 items-center grid-rows-[50px,50px,50px] gap-x-8 gap-y-5 w-full max-w-[500px] h-fit my-auto grid-flow-dense">
+
+    <Tech title='HTML' icono={Html} />
+    <Tech title='CSS' icono={Css} />
+    <Tech title='Javscript' icono={Javascript} />
+    <Tech title='Tailwind' icono={Tailwind} />
+    <Tech title='Astro' icono={AstroIcon} />
+    <Tech title='Git' icono={Git} />
+    <Tech title='Figma' icono={Figma} />
+
+</ul>
