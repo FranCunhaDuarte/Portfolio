@@ -29,8 +29,12 @@ const { project } = Astro.props;
                 </ul>
               </div>
               <div class="relative flex h-[60%] items-end justify-center mx-auto">
-                <img class="max-w-full max-h-[110%] shadow-2xl shadow-black-100 object-cover xl:hover:scale-[1.05] xl:translate-y-24 xl:group-hover:translate-y-0 xl:transition-[transform] xl:duration-700" src={project.desktopImage} alt="">
-                <img class="absolute max-w-[30%] bottom-0 right-0 max-h-[120%] shadow-2xl shadow-black-100 xl:hover:scale-[1.05] xl:translate-y-24 xl:group-hover:translate-y-0 xl:transition-[transform] xl:duration-700" src={project.mobileImage} alt="">
+                <picture class="xl:max-w-[80%]">
+                  <a href={project.website} target="_blank" rel="noopener noreferrer"><img class="shadow-2xl shadow-black-100 object-cover xl:hover:scale-[1.05] xl:translate-y-24 xl:group-hover:translate-y-0 xl:transition-[transform] xl:duration-700" src={project.desktopImage} alt=""></a>
+                </picture>
+                <picture class="max-w-[30%]">
+                  <a href={project.website} target="_blank" rel="noopener noreferrer"><img class="absolute bottom-0 right-0 max-h-[120%] shadow-2xl shadow-black-100 xl:hover:scale-[1.05] xl:translate-y-24 xl:group-hover:translate-y-0 xl:transition-[transform] xl:duration-700" src={project.mobileImage} alt=""></a>
+                </picture>
               </div>
             </div>
           </div>
